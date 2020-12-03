@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
-
 	"github.com/gorilla/mux"
 	"html/template"
+	_ "github.com/go-sql-driver/mysql"
 )
 
  var router = mux.NewRouter()

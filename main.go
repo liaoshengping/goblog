@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/gorilla/mux"
 )
@@ -37,7 +38,12 @@ func articlesIndexHandler(w http.ResponseWriter, r *http.Request) {
 func articlesStoreHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "创建新的文章")
 }
-
+func removeTrailingSlash(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		r.URL.Path = strings.TrimSuffix(r.URL.Path, "/")
+		next.ServeHTTP(w, r)
+	})
+}
 func main() {
 	router := mux.NewRouter()
 

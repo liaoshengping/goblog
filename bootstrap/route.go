@@ -1,6 +1,5 @@
 package bootstrap
 
-
 import (
 	"goblog/routes"
 

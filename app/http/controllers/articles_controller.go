@@ -1,29 +1,33 @@
 package controllers
 
 import (
-	"database/sql"
 	"fmt"
+	articles "goblog/app/models/article"
 	"goblog/pkg/logger"
 	"goblog/pkg/route"
 	"goblog/pkg/types"
-	"html/template"
 	"net/http"
+	"text/template"
+
+	"github.com/jinzhu/gorm"
 )
 
-type ArticlesContrller struct {
-	
+// ArticlesController 处理静态页面
+type ArticlesController struct {
 }
 
-func (*ArticlesContrller) Show(w http.ResponseWriter ,r *http.Request)  {
+// Show 文章详情页面
+func (*ArticlesController) Show(w http.ResponseWriter, r *http.Request) {
+
 	// 1. 获取 URL 参数
 	id := route.GetRouteVariable("id", r)
 
 	// 2. 读取对应的文章数据
-	article, err := getArticleByID(id)
+	article, err := articles.Get(id)
 
 	// 3. 如果出现错误
 	if err != nil {
-		if err == sql.ErrNoRows {
+		if err == gorm.ErrRecordNotFound {
 			// 3.1 数据未找到
 			w.WriteHeader(http.StatusNotFound)
 			fmt.Fprint(w, "404 文章未找到")

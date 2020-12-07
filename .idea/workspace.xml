@@ -20,11 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e2035f-1b6a-4fa7-969a-e6121fafc16f" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/route.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/article/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/article/crud.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/model/model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/http/controllers/pages_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/pages_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/route.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logger/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/route/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/route/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/types/converter.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/types/converter.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -57,7 +66,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -65,50 +74,23 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pkg" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\linuxdir\go\src\goblog\pkg" />
       <recent name="E:\linuxdir\go\src\goblog" />
       <recent name="E:\linuxdir\go\src\goblog\tests" />
     </key>
   </component>
   <component name="RunManager" selected="Go Test.go test tests">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="goblog" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build package2_test.go package_test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="goblog" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/tests/package2_test.go|$PROJECT_DIR$/tests/package_test.go" />
       <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build package_tests.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="goblog" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tests/package_tests.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <output_directory value="D:/soft/go/src/github.com/liaosp/goblog/tmp" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="goblog" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <configuration name="go test tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -118,6 +100,24 @@
       <kind value="DIRECTORY" />
       <directory value="$PROJECT_DIR$/tests" />
       <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gobench tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="goblog" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gobench" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$/tests" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysql_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="goblog" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/tests/mysql_test.go" />
       <method v="2" />
     </configuration>
     <configuration name="package_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -132,9 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Test.go test tests" />
+        <item itemvalue="Go Test.gobench tests" />
+        <item itemvalue="Go Test.mysql_test.go" />
         <item itemvalue="Go Test.package_test.go" />
         <item itemvalue="Go Build.go build package2_test.go package_test.go" />
-        <item itemvalue="Go Build.go build package_tests.go" />
       </list>
     </recent_temporary>
   </component>
@@ -196,26 +197,26 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607053720596" />
-    <state width="1877" height="339" key="GridCell.Tab.0.bottom" timestamp="1607072873512">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom" timestamp="1607307608003">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607072873512" />
-    <state width="1877" height="370" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607070776010" />
-    <state width="1877" height="339" key="GridCell.Tab.0.center" timestamp="1607072873512">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607307608003" />
+    <state width="1877" height="322" key="GridCell.Tab.0.center" timestamp="1607307608003">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="339" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607072873512" />
-    <state width="1877" height="370" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607070776010" />
-    <state width="1877" height="339" key="GridCell.Tab.0.left" timestamp="1607072873511">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="322" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607307608003" />
+    <state width="1877" height="322" key="GridCell.Tab.0.left" timestamp="1607307608003">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="339" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607072873511" />
-    <state width="1877" height="370" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607070776009" />
-    <state width="1877" height="339" key="GridCell.Tab.0.right" timestamp="1607072873512">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="322" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607307608003" />
+    <state width="1877" height="322" key="GridCell.Tab.0.right" timestamp="1607307608003">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="339" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607072873512" />
-    <state width="1877" height="370" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607070776010" />
+    <state width="1877" height="322" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607307608003" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1607061456201">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -232,13 +233,14 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607061456201" />
-    <state x="2381" y="164" key="SettingsEditor" timestamp="1606977012374">
+    <state x="2381" y="164" key="SettingsEditor" timestamp="1607303750742">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606977012374" />
-    <state x="2579" y="121" width="601" height="798" key="find.popup" timestamp="1607065271872">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607303750742" />
+    <state x="659" y="121" width="601" height="798" key="find.popup" timestamp="1607331131303">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="659" y="121" width="601" height="798" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607331131303" />
     <state x="2579" y="121" width="601" height="798" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607065271872" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607071041498">
       <screen x="1920" y="0" width="1920" height="1040" />

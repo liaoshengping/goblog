@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"fmt"
-	articles "goblog/app/models/article"
+	"goblog/app/models/article"
 	"goblog/pkg/logger"
 	"goblog/pkg/route"
 	"goblog/pkg/types"
@@ -23,7 +23,7 @@ func (*ArticlesController) Show(w http.ResponseWriter, r *http.Request) {
 	id := route.GetRouteVariable("id", r)
 
 	// 2. 读取对应的文章数据
-	article, err := articles.Get(id)
+	article, err := article.Get(id)
 
 	// 3. 如果出现错误
 	if err != nil {
@@ -49,3 +49,12 @@ func (*ArticlesController) Show(w http.ResponseWriter, r *http.Request) {
 		tmpl.Execute(w, article)
 	}
 }
+
+func (*ArticlesController) Index(w http.ResponseWriter, r *http.Request)  {
+
+	articles, _ := article.GetAll()
+
+	fmt.Println("文章数据：", articles)
+}
+
+

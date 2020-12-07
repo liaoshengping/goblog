@@ -20,20 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e2035f-1b6a-4fa7-969a-e6121fafc16f" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/article/article.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/article/crud.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/model/model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/http/controllers/pages_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/pages_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/route.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logger/logger.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/route/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/route/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/types/converter.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/types/converter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article/crud.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article/crud.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
